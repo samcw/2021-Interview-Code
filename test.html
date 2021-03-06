@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button id="test-btn">Click Me.</button>
+  </div>
+  <script type="module">
+    import { debounce, throttle } from './js/debounce-throttle.js';
+    import { add } from './js/curryAdd.js'
+
+    const testButton = document.querySelector('#test-btn');
+    testButton.onclick = throttle(function() {
+      console.log('Clicked.')
+    }, 2000);
+
+    console.log(add(1)(2)(3));
+  </script>
+</body>
+</html>
