@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播</title>
+    <style>
+      .box {
+        display: flex;
+        justify-content: center;
+      }
+      .list {
+        list-style: none;
+        width: 400px;
+        height: 280px;
+        display: inline-block;
+        font-size: 3em;
+        text-align: center;
+        line-height: 280px;
+        color: aliceblue;
+        
+        position: absolute;
+
+        animation: show 16s infinite;
+      }
+      .lunbo {
+        width: 400px;
+        height: 280px;
+        overflow: hidden;
+         position: relative;
+      }
+      #card1 {
+        background-color: rgb(170, 168, 168);
+        left: 0px;
+      }
+      #card2 {
+        background-color: rgb(168, 208, 247);
+        left: 400px;
+        animation-delay: 4s;
+      }
+      #card3 {
+        background-color: rgb(140, 238, 172);
+        left: 800px;
+        animation-delay: 8s;
+      }
+      #card4 {
+        background-color: rgb(240, 140, 206);
+        left: 1200px;
+        animation-delay: 12s;
+      }
+
+      @keyframes show {
+        0% {
+          left: 400px;
+        }
+        6%,25% {
+          left: 0px;
+        }
+        31%,100% {
+          left: -400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="lunbo">
+        <div class="list" id="card1">1</div>
+        <div class="list" id="card2">2</div>
+        <div class="list" id="card3">3</div>
+        <div class="list" id="card4">4</div>
+        <!-- <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul> -->
+      </ul>
+    </div>
+    <script>
+
+    </script>
+  </body>
+</html>

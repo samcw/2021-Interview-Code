@@ -1,0 +1,14 @@
+{
+  "name": "2021-interview-code",
+  "version": "1.0.0",
+  "main": "./js/MyPromise.js",
+  "repository": "git@github.com:samcw/2021-Interview-Code.git",
+  "author": "Histo <tsukihie@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "promises-aplus-tests": "^2.1.2"
+  },
+  "scripts": {
+    "test": "promises-aplus-tests ./js/MyPromise"
+  }
+}

@@ -9,6 +9,7 @@
 <body>
   <div>
     <button id="test-btn">Click Me.</button>
+    <a href="www.bing.com" id="a">a line</a>
   </div>
   <script type="module">
     import { debounce, throttle } from './js/debounce-throttle.js';
@@ -18,6 +19,12 @@
     testButton.onclick = throttle(function() {
       console.log('Clicked.')
     }, 2000);
+
+    const a = document.querySelector('#a');
+    a.onclick = e => {
+      e.preventDefault();
+      console.log('a');
+    }
 
     console.log(add(1)(2)(3) / 6);
   </script>
